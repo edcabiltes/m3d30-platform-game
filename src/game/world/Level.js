@@ -23,7 +23,7 @@ export class Level {
 }
 
 
-let simpleLevelPlan = `
+export let simpleLevelPlan = `
 ......................
 ..#................#..
 ..#..............=.#..
@@ -35,4 +35,4 @@ let simpleLevelPlan = `
 ......................`;
 
 let simpleLevel = new Level(simpleLevelPlan);
-console.log(`${simpleLevel.width} by ${simpleLevel.height}`);
+// console.log(`${simpleLevel.width} by ${simpleLevel.height}`);
