@@ -23,18 +23,18 @@ export class Level {
 }
 
 
-export let simpleLevelPlan = `
-......................
-..#................#..
-..#..............=.#..
-..#.........o.o....#..
-..#.@......#####...#..
-..#####............#..
-......#++++++++++++#..
-......##############..
-......................`;
+// export let simpleLevelPlan = `
+// ......................
+// ..#................#..
+// ..#..............=.#..
+// ..#.........o.o....#..
+// ..#.@......#####...#..
+// ..#####............#..
+// ......#++++++++++++#..
+// ......##############..
+// ......................`;
 
-let simpleLevel = new Level(simpleLevelPlan);
+// let simpleLevel = new Level(simpleLevelPlan);
 // console.log(`${simpleLevel.width} by ${simpleLevel.height}`);
 
 Level.prototype.touches = function(pos, size, type) {
