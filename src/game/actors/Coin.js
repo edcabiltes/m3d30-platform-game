@@ -24,3 +24,12 @@ Coin.prototype.collide = function(state) {
     if (!filtered.some(a => a.type == "coin")) status = "won";
     return new State(state.level, filtered, status);
 };
+
+const wobbleSpeed = 8, wobbleDist = 0.07;
+
+Coin.prototype.update = function(time) {
+  let wobble = this.wobble + time * wobbleSpeed;
+  let wobblePos = Math.sin(wobble) * wobbleDist;
+  return new Coin(this.basePos.plus(new Vec(0, wobblePos)),
+                  this.basePos, wobble);
+};
