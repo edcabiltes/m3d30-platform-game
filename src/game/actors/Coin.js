@@ -17,3 +17,10 @@ export class Coin {
 }
 
 Coin.prototype.size = new Vec(0.6, 0.6);
+
+Coin.prototype.collide = function(state) {
+    let filtered = state.actors.filter(a => a != this);
+    let status = state.status;
+    if (!filtered.some(a => a.type == "coin")) status = "won";
+    return new State(state.level, filtered, status);
+};
