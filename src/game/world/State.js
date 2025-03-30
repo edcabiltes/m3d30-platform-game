@@ -3,7 +3,7 @@ export class State {
         this.level = level;
         this.actors = actors;
         this.status = status;
-        }
+    }
 
     static start(level) {
         return new State(level, level.startActors, "playing");
